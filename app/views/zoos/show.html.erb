@@ -1,0 +1,20 @@
+<div class="ui card">
+  <div class="content">
+    <p class="header">
+      <%= @zoo.name %>
+    </p>
+  </div>
+
+  <h2>Animals</h2>
+
+  <% @zoo.animals.each do |animal| %>
+    <li><%= animal.name %></li>
+  <% end %>
+
+
+  <div class="extra content">
+    <%= link_to 'Edit', edit_zoo_path(@zoo) %> |
+    <%= link_to 'Back', zoos_path %>
+    <%= link_to 'View animals', zoo_animals_path(@zoo) %>
+  </div>
+</div>
